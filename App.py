@@ -4,6 +4,7 @@ from PIL import Image
 import numpy as np
 from io import BytesIO
 from API import transfer_style
+import time
 
 
 # Set page configs. Get emoji names from WebFx
@@ -17,9 +18,8 @@ st.markdown(title, unsafe_allow_html=True)
 
 
 st.markdown(
-    "<b> <i> Create Digital Art using Machine Learning ! </i> </b>  &nbsp; We takes 2 images — Content Image & Style Image — and blends "
-    "them together so that the resulting output image retains the core elements of the content image, but appears to "
-    "be “painted” in the style of the style reference image.", unsafe_allow_html=True
+    "<b> <i> Create the IMAGE FROM NST using Machine Learning ! </i> </b>  &nbsp; We takes 2 images — Content Image & Style Image — and blends "
+    "OUTPUT WILL BE CONTENT OF FIRST IMAGE AND STYLE OF SECOND IMAGE", unsafe_allow_html=True
 )
 
 
@@ -92,13 +92,16 @@ with col2:
 
 
 st.markdown("</br>", unsafe_allow_html=True)
-st.warning('NOTE : You need atleast Intel i3 with 8GB memory for proper functioning of this application. ' +
+st.warning('NOTE : You need atleast Intel i3 with 8GB memory. ' +
    ' Images greater then (2000x2000) are resized to (1000x1000).')
 
 
 if content_image is not None and style_image is not None:
 
-    with st.spinner("Styling Images...will take about 20-30 secs"):
+        prg=st.progress(0)
+        for i in range(20):
+            time.sleep(0.1)
+            prg.progress(i+1)
 
         content_image = Image.open(content_image)
         style_image = Image.open(style_image)
@@ -113,7 +116,6 @@ if content_image is not None and style_image is not None:
         # output image
         styled_image = transfer_style(content_image, style_image, model_path)
         if style_image is not None:
-            # some baloons
             st.balloons()
 
         col1, col2 = st.columns(2)
@@ -124,7 +126,7 @@ if content_image is not None and style_image is not None:
 
             st.markdown("</br>", unsafe_allow_html=True)
             st.markdown(
-                "<b> Your Image is Ready ! Click below to download it. </b>", unsafe_allow_html=True)
+                "<b> YOU CAN DOWNLOAD RESULTED (CONTENT IMAGE & STYLE IMAGE). </b>", unsafe_allow_html=True)
 
             # de-normalize the image
             styled_image = (styled_image * 255).astype(np.uint8)
@@ -133,7 +135,7 @@ if content_image is not None and style_image is not None:
             buffered = BytesIO()
             img.save(buffered, format="JPEG")
             st.download_button(
-                label="Download image",
+                label="Download",
                 data=buffered.getvalue(),
-                file_name="output.png",
+                file_name="NST_IMAGE.png",
                 mime="image/png")
