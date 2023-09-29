@@ -7,12 +7,12 @@ from API import transfer_style
 
 
 # Set page configs. Get emoji names from WebFx
-st.set_page_config(page_title="PixelMix - Style Transfer",
+st.set_page_config(page_title="NEURAL STYLE TRANSFER(CONTENT + STYLE= NEW IMAGE)",
                    page_icon="./assets/favicon.png", layout="centered")
 
 # -------------Header Section------------------------------------------------
 
-title = '<p style="text-align: center;font-size: 50px;font-weight: 350;font-family:Cursive "> PixelMix </p>'
+title = '<p style="text-align: center;font-size: 50px;font-weight: 350;font-family:Cursive "> NEURAL STYLE TRANSFER </p>'
 st.markdown(title, unsafe_allow_html=True)
 
 
@@ -36,9 +36,9 @@ with st.sidebar:
     st.image(image="./assets/speed-brush.gif")
     st.markdown("</br>", unsafe_allow_html=True)
 
-    st.markdown('<p style="font-size: 25px;font-weight: 550;">Some Inspiration 🎨</p>',
+    st.markdown('<p style="font-size: 25px;font-weight: 550;">RESULTS FROM TRAINED MODEL🎨</p>',
                 unsafe_allow_html=True)
-    st.markdown('Below are some of the art we created using PixelMix.',
+    st.markdown('Below are some of the art we created using NST.',
                 unsafe_allow_html=True)
 
     # ---------------------Example art images------------------------------
@@ -72,7 +72,7 @@ with st.sidebar:
     # line break
     st.markdown(" ")
     # About the programmer
-    st.markdown("## Made by **Deepesh Mhatre** \U0001F609")
+    st.markdown("## Made by **OUR TEAM** \U0001F609")
     st.markdown("Contribute to this project at "
                 "[*github.com/deepeshdm*](https://github.com/kishokkumars150403/NST)")
 
