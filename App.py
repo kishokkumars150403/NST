@@ -74,7 +74,7 @@ with st.sidebar:
     # About the programmer
     st.markdown("## Made by **Deepesh Mhatre** \U0001F609")
     st.markdown("Contribute to this project at "
-                "[*github.com/deepeshdm*](https://github.com/deepeshdm/Realtime_Face_Detection)")
+                "[*github.com/deepeshdm*](https://github.com/kishokkumars150403/NST)")
 
 
 # -------------Body Section------------------------------------------------
