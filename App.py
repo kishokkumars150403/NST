@@ -74,7 +74,7 @@ with st.sidebar:
     # About the programmer
     st.markdown("## Made by **OUR TEAM** \U0001F609")
     st.markdown("Contribute to this project at "
-                "[*github.com/deepeshdm*](https://github.com/kishokkumars150403/NST)")
+                "[*github.com/kishokkumars150403*](https://github.com/kishokkumars150403/NST)")
 
 
 # -------------Body Section------------------------------------------------
