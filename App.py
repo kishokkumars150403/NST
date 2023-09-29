@@ -99,7 +99,7 @@ st.warning('NOTE : You need atleast Intel i3 with 8GB memory. ' +
 if content_image is not None and style_image is not None:
 
         prg=st.progress(0)
-        for i in range(20):
+        for i in range(10):
             time.sleep(0.1)
             prg.progress(i+1)
 
