@@ -36,7 +36,7 @@ with st.sidebar:
     st.image(image="./assets/speed-brush.gif")
     st.markdown("</br>", unsafe_allow_html=True)
 
-    st.markdown('<p style="font-size: 25px;font-weight: 550;">RESULTS FROM TRAINED MODEL🎨</p>',
+    st.markdown('<p style="font-size: 25px;font-weight: 550;">RESULTS FROM TRAINED MODEL</p>',
                 unsafe_allow_html=True)
     st.markdown('Below are some of the art we created using NST.',
                 unsafe_allow_html=True)
@@ -73,8 +73,6 @@ with st.sidebar:
     st.markdown(" ")
     # About the programmer
     st.markdown("## Made by **OUR TEAM** \U0001F609")
-    st.markdown("Contribute to this project at "
-                "[*github.com/kishokkumars150403*](https://github.com/kishokkumars150403/NST)")
 
 
 # -------------Body Section------------------------------------------------
