@@ -5,6 +5,7 @@ import numpy as np
 from io import BytesIO
 from API import transfer_style
 import time
+from moviepy.editor import VideoFileClip
 
 
 # Set page configs. Get emoji names from WebFx
@@ -72,6 +73,10 @@ with st.sidebar:
 # -------------Body Section------------------------------------------------
 
 # Upload Images
+clip = VideoFileClip("./assets/content1.jpg")
+clip.set_position('center')
+
+clip.preview()
 col1, col2 = st.columns(2)
 content_image = None
 style_image = None
